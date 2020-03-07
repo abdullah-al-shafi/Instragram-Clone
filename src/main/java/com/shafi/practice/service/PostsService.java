@@ -3,6 +3,7 @@ package com.shafi.practice.service;
 import java.util.Collection;
 import java.util.List;
 
+import org.hibernate.annotations.Sort;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.shafi.practice.dtos.PostsDto;
 import com.shafi.practice.model.Posts;
 import com.shafi.practice.repositories.PostsRepository;
+
 
 @Service
 public class PostsService {
@@ -29,6 +31,12 @@ public class PostsService {
 	public List<Posts> getAllPost(){
 		
 		return postsRepository.findAll();
+		
+	}
+	
+	public List<Posts> getPostsById(Long id){
+		
+		return postsRepository.findByUser_userId(id);
 	}
 	
 }

@@ -79,12 +79,12 @@
                     <div class="row top">
                         <div class="col-lg-10 p-0">
                             <form action="">
-                                <input type="text" placeholder="Add a comment" class="comments">
+                                <input type="text" placeholder="Add a comment" class="comments comment-query">
                                 
                             </form>
                         </div>
                         <div class="col-lg-2">
-                            <input class="btn " type="submit" value="Submit">
+                            <input class="btn comment-query-submit" type="submit" value="Submit">
                         </div>
                     </div>
                     <div class="row"></div>
@@ -101,10 +101,8 @@
 			
 		</c:forEach>
 
-<%--     <script src="${pageContext.request.contextPath }/js/jquery-1.12.4.js"></script>
-    <script src="${pageContext.request.contextPath }/js/bootstrap.js"></script>
-    <script src="${pageContext.request.contextPath }/js/slick.min.js"></script>
-    <script src="${pageContext.request.contextPath }/js/fontawesome.min.js"></script>
-    <script src="${pageContext.request.contextPath }/js/custom.js"></script> --%>
+<script>
+    
+</script>
 </body>
 </html>

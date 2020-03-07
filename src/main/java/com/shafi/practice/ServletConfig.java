@@ -7,6 +7,9 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import com.shafi.practice.util.Constants;
+
+
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = { "com.shafi.practice.controllers" })
@@ -23,13 +26,14 @@ public class ServletConfig implements WebMvcConfigurer{
 
 		// Register resource handler for -
 
+		//registry.addResourceHandler("/img/**").addResourceLocations("file:///"+Constants.UPLOADED_FOLDER);
 		// IMAGES
-		registry.addResourceHandler("/images/**").addResourceLocations("/WEB-INF/resources/images/");
+		registry.addResourceHandler("/images/**").addResourceLocations("file:///"+Constants.UPLOADED_FOLDER);
 		
 		//POST IMAGES
-	    registry.addResourceHandler("/images/posts/**").addResourceLocations("/WEB-INF/resources/images/posts/");
+	    registry.addResourceHandler("/images/posts/**").addResourceLocations("file:///"+Constants.UPLOADED_FOLDER);
 		
-		registry.addResourceHandler("/images/profile/**").addResourceLocations("/WEB-INF/resources/images/profile/");
+		registry.addResourceHandler("/images/profile/**").addResourceLocations("file:///"+Constants.UPLOADED_FOLDER);
 		
 		//font
 		registry.addResourceHandler("/font/**").addResourceLocations("/WEB-INF/resources/font/");

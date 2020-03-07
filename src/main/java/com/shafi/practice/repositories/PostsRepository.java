@@ -14,4 +14,6 @@ import com.shafi.practice.model.Posts;
 public interface PostsRepository extends JpaRepository<Posts, Long> {
 
 	List<Posts> findByUser_userId(Long id);
+	
+	
 }

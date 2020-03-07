@@ -37,12 +37,14 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
         // We are permitting all static resources to be accessed publicly
 		http
 			.authorizeRequests()
-			.antMatchers("/images/**","/css/**", "/js/**","/font/**","/register","/profile").permitAll()
+			.antMatchers("/images/**","/images/posts/**","/images/profile/**","/css/**", "/js/**","/font/**","/register").permitAll()
                 // We are restricting endpoints for individual roles.
                 // Only users with allowed roles will be able to access individual endpoints.
 				
 				  .and() 
 				  .authorizeRequests()
+				  .antMatchers("/profile").hasRole("USER")
+				  
 				 
 				/*
 				 * .antMatchers("/country/**").hasRole("ADMIN") //

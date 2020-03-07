@@ -2,14 +2,19 @@ package com.shafi.practice.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -33,6 +38,29 @@ public class Posts implements Serializable{
 
 	@Column(name = "createdAt", updatable = false)
 	private LocalDateTime createdAt;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "posts", cascade = CascadeType.ALL)
+    private List<Comment> comments  = new ArrayList();
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "posts", cascade = CascadeType.ALL)
+    private List<Reaction> reactions  = new ArrayList();
+
+	
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
+
+	public List<Reaction> getReactions() {
+		return reactions;
+	}
+
+	public void setReactions(List<Reaction> reactions) {
+		this.reactions = reactions;
+	}
 
 	public long getPostsId() {
 		return postsId;
@@ -81,15 +109,7 @@ public class Posts implements Serializable{
 	 * @param user
 	 * @param createdAt
 	 */
-	public Posts(long postsId, String postsImage, String postsText, com.shafi.practice.model.User user,
-			LocalDateTime createdAt) {
-		super();
-		this.postsId = postsId;
-		this.postsImage = postsImage;
-		this.postsText = postsText;
-		this.user = user;
-		this.createdAt = createdAt;
-	}
+
 
 	/**
 	 * 
@@ -98,11 +118,22 @@ public class Posts implements Serializable{
 		
 	}
 
+	public Posts(long postsId, String postsImage, String postsText, User user, LocalDateTime createdAt,
+			List<Comment> comments, List<Reaction> reactions) {
+		super();
+		this.postsId = postsId;
+		this.postsImage = postsImage;
+		this.postsText = postsText;
+		this.user = user;
+		this.createdAt = createdAt;
+		this.comments = comments;
+		this.reactions = reactions;
+	}
+
 	@Override
 	public String toString() {
-		return "Posts [postsId=" + postsId + ", postsImage=" + postsImage + ", postsText=" + postsText + ", User="
-				+ user + ", createdAt=" + createdAt + "]";
+		return "Posts [postsId=" + postsId + ", postsImage=" + postsImage + ", postsText=" + postsText + ", user="
+				+ user + ", createdAt=" + createdAt + ", comments=" + comments + ", reactions=" + reactions + "]";
 	}
-	
-	
+		
 }

@@ -8,9 +8,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 
@@ -30,10 +33,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.shafi.practice.dtos.UserDto;
 import com.shafi.practice.enums.Role;
-
+import com.shafi.practice.model.Posts;
 import com.shafi.practice.request.User;
 import com.shafi.practice.service.PostsService;
 import com.shafi.practice.service.UserService;
+import com.shafi.practice.util.Constants;
 import com.shafi.practice.repositories.UserRepository;
 
 
@@ -65,13 +69,18 @@ public class UserController {
 	@GetMapping("/")
 	public String root(Model model  , Authentication auth ) {
 		
+		String absoluteFilePath = Constants.UPLOADED_FOLDER;
 		var username =  auth.getName();
 		
 		com.shafi.practice.model.User user = userService.getUserByName(username);
 		
-		model.addAttribute("post_list",postsService.getAllPost());
-		model.addAttribute("image",user.getUserImage());
-		model.addAttribute("fullname",user.getUserFullName());
+		List<Posts> posts = postsService.getAllPost();
+		
+	    // static void reverse(List list) method reverses the order of elements of the specified list.
+	    Collections.reverse(posts);
+	    model.addAttribute("image_path", absoluteFilePath);	
+		model.addAttribute("post_list",posts);
+		model.addAttribute("user",user);
 		return "home";
 	}
 	
@@ -112,12 +121,18 @@ public class UserController {
 	
     @GetMapping("/profile")
     public String getProfilePage(Model model, Authentication auth){
+    	
+    	String absoluteFilePath = Constants.UPLOADED_FOLDER;
 
-var username =  auth.getName();
+    	var username =  auth.getName();
 		
 		com.shafi.practice.model.User user = userService.getUserByName(username);
 
+		List<Posts> posts = postsService.getPostsById(user.getUserId());
+		model.addAttribute("image_path", absoluteFilePath);		
         model.addAttribute("user",user);
+        model.addAttribute("post_list",posts);
+        model.addAttribute("post_size",posts.size());
 
 
         return "user/profile";
@@ -137,8 +152,9 @@ var username =  auth.getName();
 
             try {
 
+            	String absoluteFilePath = Constants.UPLOADED_FOLDER;
 
-                File directory = new File( servletContext.getRealPath("/WEB-INF/resources/images/profile/") );
+                File directory = Paths.get(absoluteFilePath).toFile();
 
 
                 if (!directory.exists()){
@@ -182,7 +198,7 @@ var username =  auth.getName();
 
        // modelMap.addAttribute("file", multipartFile);
 
-        return "redirect:/";
+        return "redirect:/profile";
 
     }
 

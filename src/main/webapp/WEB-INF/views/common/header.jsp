@@ -43,7 +43,7 @@
                   <li class="liiii"><a class="link" href="#bgg"><i class="flaticon-explore"></i></a></li>
                   <li class="liiii"><a class="link" href="#"><i class="flaticon-heart"></i></a></li>
             </ul>
-            <a href="${pageContext.request.contextPath}/profile"><img class="ista-img" src="${pageContext.request.contextPath }${image}" ></img></a>
+            <a href="${pageContext.request.contextPath}/profile"><img class="ista-img" src="${pageContext.request.contextPath}${user.userImage}" ></img></a>
           </div>
           </div>
        </nav>

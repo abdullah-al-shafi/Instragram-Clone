@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-/*@Entity
+@Entity
 @Table(name = "tbl_comment")
 public class Comment implements Serializable{
 	
@@ -27,36 +27,25 @@ public class Comment implements Serializable{
 			unique=false, updatable=false)
 	private User commentedUser;
 	
-	 * @ManyToOne
-	 * 
-	 * @Column(name="post_id", nullable=false) private Posts posts;
+	@ManyToOne
+    private Posts posts;
 	 
 	
 	@Column(name = "commentAt", updatable = false)
 	private LocalDateTime commentAt;
-	*//**
-	 * 
-	 *//*
+
 	public Comment() {
 		
 	}
-	*//**
-	 * @param commentId
-	 * @param commentBody
-	 * @param commentedUser
-	 * @param posts
-	 *//*
+
 
 	public Long getCommentId() {
 		return commentId;
 	}
-	*//**
-	 * @param commentId
-	 * @param commentBody
-	 * @param commentedUser
-	 * @param posts
-	 * @param commentAt
-	 *//*
+
+
+	
+	
 	public Comment(Long commentId, String commentBody, User commentedUser, Posts posts, LocalDateTime commentAt) {
 		super();
 		this.commentId = commentId;
@@ -65,8 +54,8 @@ public class Comment implements Serializable{
 		this.posts = posts;
 		this.commentAt = commentAt;
 	}
-	
-	
+
+
 	public LocalDateTime getCommentAt() {
 		return commentAt;
 	}
@@ -94,6 +83,8 @@ public class Comment implements Serializable{
 	public void setPosts(Posts posts) {
 		this.posts = posts;
 	}
+
+
 	@Override
 	public String toString() {
 		return "Comment [commentId=" + commentId + ", commentBody=" + commentBody + ", commentedUser=" + commentedUser
@@ -101,9 +92,10 @@ public class Comment implements Serializable{
 	}
 
 
+
 	
 	
 	
 
 }
-	*/
+	
