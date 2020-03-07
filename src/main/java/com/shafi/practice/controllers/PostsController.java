@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -21,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.shafi.practice.dtos.PostsDto;
 import com.shafi.practice.service.PostsService;
 import com.shafi.practice.service.UserService;
+import com.shafi.practice.util.Constants;
 
 @Controller
 public class PostsController {
@@ -58,7 +60,9 @@ public class PostsController {
             try {
 
 
-                File directory = new File( servletContext.getRealPath("/WEB-INF/resources/images/posts/") );
+            	String absoluteFilePath = Constants.UPLOADED_FOLDER;
+
+                File directory = Paths.get(absoluteFilePath).toFile();
 
 
                 if (!directory.exists()){
@@ -83,7 +87,7 @@ public class PostsController {
                 postsDto.setPostsText(userPosts);
                 postsDto.setUser(user);
                 postsDto.setCreatedAt(now);
-                user.setUserImage("/images/profile/"+pictureName);
+//                user.setUserImage("/images/profile/"+pictureName);
                 
                 postsService.addPosts(postsDto);
 

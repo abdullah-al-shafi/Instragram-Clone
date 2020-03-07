@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
               <a class="navbar-brand" href="${pageContext.request.contextPath }/">
-                  <img src="images/instagram-img.png" class="img-fluid" alt="instagram-img.png">
+                  <img src="${pageContext.request.contextPath }/images/instagram-img.png" class="img-fluid" alt="instagram-img.png">
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
