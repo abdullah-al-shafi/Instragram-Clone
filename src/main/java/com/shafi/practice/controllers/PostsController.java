@@ -44,7 +44,7 @@ public class PostsController {
         var username = authenticateduser.getUsername();
         com.shafi.practice.model.User user = userService.getUserByName(authenticateduser.getUsername());
         
-        LocalDateTime now = LocalDateTime.now();
+		/* LocalDateTime now = LocalDateTime.now(); */
         
         Date date = new Date();
         //This method returns the time in millis
@@ -86,7 +86,7 @@ public class PostsController {
                 postsDto.setPostsImage("/images/posts/"+pictureName);
                 postsDto.setPostsText(userPosts);
                 postsDto.setUser(user);
-                postsDto.setCreatedAt(now);
+                postsDto.setCreatedAt(new Date());
 //                user.setUserImage("/images/profile/"+pictureName);
                 
                 postsService.addPosts(postsDto);

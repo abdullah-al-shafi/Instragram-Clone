@@ -113,7 +113,7 @@ public class UserController {
 		userDto.setPassword(passwordEncoder.encode(user.getPassword()));
 		userDto.setCreatedAt(now);
 		userDto.setRole(Role.ROLE_USER);
-		userDto.setUserImage("/images/profile/default_profile.jpg");
+		userDto.setUserImage("/images/default_profile.jpg");
 		userService.addUser(userDto);
 		
 		return "redirect:/login";

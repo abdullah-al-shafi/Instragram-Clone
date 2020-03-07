@@ -2,7 +2,7 @@ package com.shafi.practice.dtos;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-
+import java.util.Date;
 
 import com.shafi.practice.model.User;
 
@@ -16,7 +16,7 @@ public class PostsDto implements Serializable{
 
 	private User User;
 
-	private LocalDateTime createdAt;
+	private Date createdAt;
 	
 	
 
@@ -35,7 +35,7 @@ public class PostsDto implements Serializable{
 	 * @param createdAt
 	 */
 	public PostsDto(long postsId, String postsImage, String postsText, com.shafi.practice.model.User user,
-			LocalDateTime createdAt) {
+			Date createdAt) {
 		super();
 		this.postsId = postsId;
 		this.postsImage = postsImage;
@@ -76,11 +76,11 @@ public class PostsDto implements Serializable{
 		this.User = user;
 	}
 
-	public LocalDateTime getCreatedAt() {
+	public Date getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(LocalDateTime createdAt) {
+	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
 

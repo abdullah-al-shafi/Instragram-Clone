@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
         <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+        <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+        <%@ taglib prefix="ta" uri="https://github.com/dernasherbrezon/jtimeago"%>
     
     <!-- GLOBAL HEADER -->
 <jsp:include page="common/header.jsp"/>
@@ -20,9 +22,11 @@
 </head>
 <body>
 
-		<c:forEach items="${post_list }" var="posts">
+		
 		
 	    <section id="gallary">
+	    <div class="main_body">
+	    <c:forEach items="${post_list }" var="posts">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8  border">
@@ -70,9 +74,14 @@
                     <div class="row">
                         <div class="col-lg-12 eye">
                             <div class="like">
-                                    <a href="lve-like">1 like</a>
-                                    <span><a href="love-like"><b>${posts.user.username}</b> ${posts.postsText}</a></span>
-                                    <span><a href="love-like">3 hour ago</a></span>
+                                    <a class="lve-like">1 like</a>
+                                    <span><a class="love-like"><b>${posts.user.username}</b> ${posts.postsText}</a><br></span>
+                                    <div class="love-like">
+                                    <time class="published" >
+											<ta:formatDate value="${posts.createdAt }"
+												pattern="dd MMM yyyy HH:mm" />
+										</time>
+                                    </div><br>
                             </div>
                         </div>
                     </div>
@@ -95,11 +104,12 @@
                 </div>
             </div>
         </div>
-        
+        </c:forEach>
+        </div>
     </section>		
 			
 			
-		</c:forEach>
+		
 
 <script>
     

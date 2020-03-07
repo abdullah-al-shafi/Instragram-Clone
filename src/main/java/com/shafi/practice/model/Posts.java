@@ -3,6 +3,7 @@ package com.shafi.practice.model;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -37,7 +38,7 @@ public class Posts implements Serializable{
 	private User user;
 
 	@Column(name = "createdAt", updatable = false)
-	private LocalDateTime createdAt;
+	private Date createdAt;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "posts", cascade = CascadeType.ALL)
     private List<Comment> comments  = new ArrayList();
@@ -94,11 +95,11 @@ public class Posts implements Serializable{
 		this.user = user;
 	}
 
-	public LocalDateTime getCreatedAt() {
+	public Date getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(LocalDateTime createdAt) {
+	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
 
@@ -118,7 +119,7 @@ public class Posts implements Serializable{
 		
 	}
 
-	public Posts(long postsId, String postsImage, String postsText, User user, LocalDateTime createdAt,
+	public Posts(long postsId, String postsImage, String postsText, User user, Date createdAt,
 			List<Comment> comments, List<Reaction> reactions) {
 		super();
 		this.postsId = postsId;

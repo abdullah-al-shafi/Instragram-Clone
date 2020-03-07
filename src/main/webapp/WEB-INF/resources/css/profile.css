@@ -34,7 +34,7 @@ img {
 
 .container {
     max-width: 93.5rem;
-    margin: 0 auto;
+    margin-top: 0 auto;
     padding: 0 2rem;
 }
 
@@ -63,6 +63,7 @@ img {
 /* Profile Section */
 
 .profile {
+	margin-top: 70px;
     padding: 5rem 0;
 }
 

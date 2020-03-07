@@ -10,9 +10,17 @@ a, a:hover {
 ul, li {
   list-style: none; }
 
-.navbar {
-  background: #fff;
+.navbar  {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background: #fff;
   border-bottom: 1px solid #c6c1c1; }
+  
+  
+  
   .navbar .form-inline {
     margin-left: 210px; }
     .navbar .form-inline .form-control {
@@ -23,7 +31,20 @@ ul, li {
       .navbar .form-inline .btn:hover {
         background: #393939;
         color: #fff; }
-  .navbar .navbar-nav .liiii .link {
+
+.navbar.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	background: #fff;
+	color: #fff;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.navbar .navbar-nav .liiii .link {
     color: #393939;
     font-size: 25px;
     margin-left: 20px; }
@@ -36,8 +57,17 @@ ul, li {
     margin-left: 20px;
     border: 0.5px solid #393939; }
 #gallary{
-	margin: 50px 0px;
+
 }
+#gallary .main_body{
+	
+	margin-top: 100px;
+}
+
+#gallary .container{
+	margin-bottom: 50px;
+}
+
 
 #gallary .border {
   border: 1px solid #8b8b8b; }
@@ -78,7 +108,7 @@ ul, li {
 #gallary .like .love-like {
   font-size: 13px;
   font-weight: 600;
-  color: #211f1f; }
+  color: #000000; }
 #gallary .like span {
   display: block; }
 #gallary .top {
