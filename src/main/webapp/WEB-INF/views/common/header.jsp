@@ -5,123 +5,98 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>${ pageTitle }</title>
-    <link rel="stylesheet"
-          href="${pageContext.request.contextPath }/css/bootstrap.min.css"/>
-
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-    <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="${pageContext.request.contextPath }/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Instagram-clone</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/font/flaticon.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/fontawesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/responsive.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/slick.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/all.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https:/resources/demos/style.css">
+    
 </head>
+
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="${pageContext.request.contextPath }/">Batch-1</a>
-
-        <sec:authorize access="isAuthenticated()">
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown"><a
-                        class="nav-link dropdown-toggle" href="#"
-                        role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Countries</a>
-                    <div class="dropdown-menu"
-                         aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item"
-                           href="${pageContext.request.contextPath }/country/add">Add</a>
-                        <a class="dropdown-item"
-                           href="${pageContext.request.contextPath }/country/show-all">Show
-                            All</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown"><a
-                        class="nav-link dropdown-toggle" href="#"
-                        role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Students</a>
-                    <div class="dropdown-menu"
-                         aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item"
-                           href="${pageContext.request.contextPath }/student/add">Add</a>
-                        <a class="dropdown-item"
-                           href="${pageContext.request.contextPath }/student/show-all">Show
-                            All</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown"><a
-                        class="nav-link dropdown-toggle" href="#"
-                        role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Courses</a>
-                    <div class="dropdown-menu"
-                         aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item"
-                           href="${pageContext.request.contextPath }/course/add">Add</a> <a
-                            class="dropdown-item"
-                            href="${pageContext.request.contextPath }/course/show-all">Show
-                        All</a>
-                    </div>
-                </li>
-                <sec:authorize access="hasRole('ADMIN')">
-                    <li class="nav-item dropdown"><a
-                            class="nav-link dropdown-toggle" href="#"
-                            role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Users</a>
-                        <div class="dropdown-menu"
-                             aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item"
-                               href="${pageContext.request.contextPath }/user/add">Add</a> <a
-                                class="dropdown-item"
-                                href="${pageContext.request.contextPath }/user/show-all">Show
-                            All</a>
-                        </div>
-                    </li>
-                </sec:authorize>
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0" style="display: none">
-                <input class="form-control mr-sm-2" type="search"
-                       placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-secondary" type="submit">Search</button>
-            </form>
-
-            <div class="dropdown ">
-                <button class="btn btn-outline-secondary dropdown-toggle ml-3"
-                        type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                    <sec:authentication property="principal.username"/>
-                    <sec:authorize access="hasRole('ADMIN')">(ADMIN)</sec:authorize>
-                    <sec:authorize access="hasRole('USER')">(USER)</sec:authorize>
-                    <sec:authorize access="hasRole('PREMIUM_USER')">(PREMIUM_USER)</sec:authorize>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <%--                    <a class="dropdown-item"--%>
-                        <%--                       href="${pageContext.request.contextPath}/edit_profile">Edit Profile</a>--%>
-                    <a class="dropdown-item"
-                       href="${pageContext.request.contextPath}/logout">Logout</a>
-                </div>
-            </div>
-            <div class="Fifk5"><div class="oZBNB"></div>
-            <a class="_2dbep qNELH kIKUG" href="${pageContext.request.contextPath}/profile"  style="width: 22px; height: 22px;">
-            <img alt="shafi.sbf's profile picture" class="_6q-tv" 
-            src="${pageContext.request.contextPath}/${image}">
+    
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+              <a class="navbar-brand" href="${pageContext.request.contextPath }/">
+                  <img src="images/instagram-img.png" class="img-fluid" alt="instagram-img.png">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
           
-            
-            </a></div>
-            
-            </sec:authorize>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
 
-        </div>
-    </div>
-</nav>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                  <li class="liiii"><a class="link" id="opener" href="#rafi"><i class="flaticon-add"></i></a></li>
+                  <li class="liiii"><a class="link" href="${pageContext.request.contextPath }/"><i class="flaticon-home"></i></a></li>
+                  <li class="liiii"><a class="link" href="#bgg"><i class="flaticon-explore"></i></a></li>
+                  <li class="liiii"><a class="link" href="#"><i class="flaticon-heart"></i></a></li>
+            </ul>
+            <a href="${pageContext.request.contextPath}/profile"><img class="ista-img" src="${pageContext.request.contextPath }${image}" ></img></a>
+          </div>
+          </div>
+       </nav>
+    </section>
+
+	<div id="dialog" title="Create post">
+
+		<p><img src="${pageContext.request.contextPath}${user.userImage}"
+			alt="profile" height="400" width="1600" class="align-self-center" />
+		</p>
+
+		<form:form method="POST"
+			action="${pageContext.request.contextPath}/user/posts"
+			enctype="multipart/form-data">
+			
+			<p>Upload picture</p>
+			<p><input type="file" name="file" /></p>
+			<p><input type="text" name="userPosts" placeholder="Whats on your mind?" /></p>
+			<p><input class="btn btn-primary float-right" type="submit"
+						value="Submit" /></p>
+			
+		</form:form>
+	</div>
+
+	<script src="${pageContext.request.contextPath }/js/jquery-1.12.4.js"></script>
+    <script src="${pageContext.request.contextPath }/js/fontawesome.min.js"></script>
+    <script src="${pageContext.request.contextPath }/js/bootstrap.js"></script>
+    <script src="${pageContext.request.contextPath }/js/slick.min.js"></script>
+    <script src="${pageContext.request.contextPath }/js/custom.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script>
+  $( function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+  </script>
+    
+</body>
+
+
+</html>

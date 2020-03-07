@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a, a:hover {
+  text-decoration: none; }
+
+ul, li {
+  list-style: none; }
+
+.navbar .form-inline {
+  background: #ffb100; }
+  .navbar .form-inline .form-control {
+    color: #ea0e0e;
+    margin-left: 100px; }
+.navbar .navbar-nav .liiii .link .flaticon-add {
+  color: #000; }
+
+/*# sourceMappingURL=main.css.map */

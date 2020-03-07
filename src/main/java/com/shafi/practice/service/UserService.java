@@ -60,12 +60,10 @@ public class UserService implements UserDetailsService {
 		
 	}
     
-    public void updateuserProfilePicture(String imageUrl,String username) {
+    public void updateuserProfilePicture(User u) {
     	
-    	User user = userRepository.findByusername(username);
-    	
-    	user.setUserImage(imageUrl);
-    	
+    	var user = userRepository.findByusername(u.getUsername());
+    	BeanUtils.copyProperties(u,user);
     	userRepository.save(user);
     	
     	

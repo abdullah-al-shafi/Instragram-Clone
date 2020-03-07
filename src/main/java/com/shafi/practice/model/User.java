@@ -88,7 +88,7 @@ public class User implements Serializable {
 	}
 
 	public void setUserImage(String userImage) {
-		userImage = userImage;
+		this.userImage = userImage;
 	}
 
 	public LocalDateTime getCreatedAt() {

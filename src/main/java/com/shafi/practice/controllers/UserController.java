@@ -32,6 +32,7 @@ import com.shafi.practice.dtos.UserDto;
 import com.shafi.practice.enums.Role;
 
 import com.shafi.practice.request.User;
+import com.shafi.practice.service.PostsService;
 import com.shafi.practice.service.UserService;
 import com.shafi.practice.repositories.UserRepository;
 
@@ -44,6 +45,9 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
+	
+	@Autowired
+	PostsService postsService;
 	
 	private final UserRepository userRepository;
 	
@@ -65,9 +69,8 @@ public class UserController {
 		
 		com.shafi.practice.model.User user = userService.getUserByName(username);
 		
-//		Manager manager = managerService.getManagerByUserID(user.getId());
-//		
-//		model.addAttribute("manager",manager);
+		model.addAttribute("post_list",postsService.getAllPost());
+		model.addAttribute("image",user.getUserImage());
 		model.addAttribute("fullname",user.getUserFullName());
 		return "home";
 	}
@@ -156,7 +159,9 @@ var username =  auth.getName();
                 outputStream.flush();
                 outputStream.close();
 
-                userService.updateuserProfilePicture("/images/profile/"+pictureName,username);
+                user.setUserImage("/images/profile/"+pictureName);
+                
+                userService.updateuserProfilePicture(user);
 
                 System.out.println("file name: "+outputfile.getName());
                 modelMap.addAttribute("fileName",outputfile.getName());

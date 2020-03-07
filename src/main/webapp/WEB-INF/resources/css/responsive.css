@@ -1,0 +1,560 @@
+@media(min-width: 992px) and (max-width: 1199px){
+    header nav .navbar-nav .nav-item .nav-link{
+        line-height: 85px;
+    }
+    #banner .slide h1{
+        font-size: 40px;
+        padding-top: 80px;
+    }
+    #banner .slide p{
+        font-size: 16px;
+        padding-top: 0;
+    }
+    #banner .slide .learn-more{
+        font-size: 20px;
+        line-height: 50px;
+        padding: 0 25px;
+        margin-top: 10px;
+        margin-bottom: 60px;
+    }
+    #custom .item i{
+        font-size: 30px;
+        line-height: 75px;
+        width: 75px;
+        height: 75px;
+        border: 1px solid #49cbcd;
+        margin-top: 40px;
+        border-radius: 50%;
+    }
+    #custom .item h4{
+        font-size: 18px;
+    }
+    #custom .item p{
+        font-size: 11px;
+        padding-top: 5px;
+    }
+    #custom .item a{
+        font-size: 10px;
+        border-radius: 5px;
+        margin-bottom: 40px;
+    }
+    #team-part h2{
+        font-size: 37px;
+        padding-top: 35px;
+    }
+    #team-part .image{
+        margin-top: 45px;
+    }
+    #team-part .contain h3{
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    #team-part .contain h5{
+        font-size: 12px;
+    }
+    #team-part .contain p{
+        font-size: 13px;
+        padding-bottom: 25px;s
+    }
+    #protfolio h2{
+        font-size: 40px;
+    }
+    #protfolio .see{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    #testimonials h2{
+        font-size: 40px;
+        padding-top: 80px;
+    }
+    #testimonials p{
+        font-size: 17px;
+        padding-top: 17px;
+    }
+    #testimonials span{
+        font-size: 20px;
+    }
+    #contact h2{
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    #element{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #contact{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+
+
+@media(min-width: 768px) and (max-width: 991px){
+    header nav .navbar-nav .nav-item .nav-link{
+        font-size: 12px;
+        line-height: 60px;
+    }
+    #banner .slide h1{
+        font-size: 35px;
+        padding-top: 75px;
+    }
+    
+/* header parts ends   */
+    #banner .slide p{
+        font-size: 14px;
+    }
+    #banner .slide .learn-more{
+        font-size: 15px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin-top: 0;
+        margin-bottom: 75px;
+    }
+    #banner .carousel-control-next i{
+        font-size: 15px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+    }
+    #banner .carousel-control-prev i{
+        font-size: 15px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+    }
+    
+/*  banner parts ends  */
+    
+    #custom .item i{
+        font-size: 30px;
+        border: 1px solid #49cbcd;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+        margin-top: 40px;
+    }
+    #custom .item h4{
+        font-size: 15px;
+        padding-top: 15px;
+    }
+    #custom .item p{
+        font-size: 10px;
+        padding-top: 3px;
+    }
+    #custom .item a{
+        font-size: 10px;
+        line-height: 20px;
+        padding: 0 10px;
+        border-radius: 2px;
+        margin-bottom: 40px;
+    }
+    #protfolio h2{
+        font-size: 35px;
+    }
+    #protfolio .see{
+        font-size: 20px;
+        line-height: 50px;
+        padding: 0 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
+    #team-part h2{
+        font-size: 35px;
+        padding-top: 50px;
+    }
+    #testimonials h2{
+        font-size: 35px;
+        padding-top: 70px;
+    }
+    #testimonials p{
+        font-size: 17px;
+    }
+    #testimonials span{
+        font-size: 18px;
+    }
+    #contact h2{
+        font-size: 35px;
+        padding-bottom: 20px;
+    }
+    #contact{
+        padding: 50px 0;
+    }
+    #contact .from-area .send{
+        padding: 0 319px;
+    }
+    #contact .social_icon{
+        padding-top: 15px;
+    }
+    #team-part .image{
+        margin-top: 0px;
+    }
+    #team-part h2{
+        padding-bottom: 80px;
+    }
+}
+
+
+
+@media(min-width: 576px) and (max-width: 767px){
+    header nav .navbar-nav .nav-item .nav-link{
+        padding: 0 240px;
+        line-height: 50px;
+    }
+    #banner .slide h1{
+        font-size: 27px;
+        padding-top: 30px;
+    }
+    #banner .slide .learn-more{
+        font-size: 14px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        line-height: 30px;
+        padding: 0 15px;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    #banner .slide p{
+        font-size: 12px;
+    }
+    #banner .carousel-control-next i{
+        font-size: 12px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    #banner .carousel-control-prev i{
+        font-size: 12px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    #custom .item i{
+        margin-top: 30px;
+    }
+    #protfolio h2{
+        font-size: 30px;
+    }
+    #protfolio .see{
+        font-size: 18px;
+        padding: 0 15px;
+        border: 1px solid #fff;
+        line-height: 40px;
+        margin-top: 30px;
+        margin-bottom: 0;
+        border-radius: 3px;
+    }
+    #team-part h2{
+        font-size: 35px;
+        padding-top: 40px;
+    }
+    #team-part .image{
+        margin-top: 50px;
+    }
+    #testimonials{
+        padding-bottom: 40px;
+    }
+    #testimonials h2{
+        padding-top: 40px;
+        font-size: 30px;
+    }
+    #testimonials p{
+        font-size: 13px;
+    }
+    #testimonials span{
+        font-size: 17px;
+    }
+    #contact{
+        padding: 50px 0;
+    }
+    #contact h2{
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+    #contact h3{
+        font-size: 18px;
+        padding-top: 0;
+    }
+    #contact p{
+        font-size: 12px;
+    }
+    #contact .social_icon{
+        padding-top: 0;
+    }
+    #contact .social_media{
+        padding-top: 0;
+    }
+    #contact .from-area .input{
+        margin-top: 15px;
+        border-radius: 3px;
+    }
+    #contact .from-area .send{
+        font-size: 20px;
+        padding: 0 100px;
+        margin-top: 15px;
+        border-radius: 3px;
+    }
+    #custom .item i{
+        font-size: 30px;
+        border: 1px solid #49cbcd;
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+    }
+    #custom .item h4{
+        font-size: 20px;
+        padding-top: 15px;
+    }
+    #custom .item p{
+        font-size: 13px;
+    }
+    #custom .item a{
+        font-size: 13px;
+        padding: 0 12px;
+        line-height: 28px;
+        border-radius: 3px;
+    }
+    #team-part .contain h3{
+        padding-top: 20px;
+    }
+}
+
+
+
+
+@media(min-width:320px) and (max-width: 575px){
+    header nav .navbar-nav .nav-item .nav-link{
+        font-size: 13px;
+        line-height: 50px;
+        padding: 0 135px;
+    }
+    #banner .slide h1{
+        font-size: 20px;
+        padding-top: 30px;
+    }
+    #banner .slide p{
+        font-size: 8px;
+        padding-top: 0;
+    }
+    #banner .slide .learn-more{
+        font-size: 10px;
+        border: 1px solid #fff;
+        border-radius: 2px;
+        padding: 0 10px;
+        line-height: 20px;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    #banner .carousel-control-next i{
+        display: none;
+    }
+    #banner .carousel-control-prev i{
+        display: none;
+    }
+    .navbar-toggler{
+        font-size: 10px;
+    }
+    .img-fluid{
+        max-width: 60%;
+        height: auto;
+    }
+    #custom .item i{
+        font-size: 20px;
+        border: 1px solid #49cbcd;
+        width: 60px;
+        height: 60px;  
+        line-height: 60px;
+        margin-top: 30px;
+    }
+    #custom .item h4{
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    #custom .item p{
+        font-size: 10px;
+        padding-top: 0;
+    }
+    #custom .item a{
+        font-size: 10px;
+        line-height: 20px;
+        padding: 0 10px;
+        border-radius: 2px;
+        margin-bottom: 30px;
+    }
+    #protfolio{
+        padding: 20px 0;
+    }
+    #protfolio h2{
+        font-size: 20px;
+    }
+    #protfolio .gallary{
+        margin-top: 15px;
+    }
+    .gallary a{
+        margin-left: 25px;
+    }
+    #protfolio .see{
+        font-size: 10px;
+        line-height: 25px;
+        padding: 0 10px;
+        border: 1px solid #49cbcd;
+        border-radius: 2px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    #team-part h2{
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    #team-part .image{
+        margin-top: 30px;
+    }
+    #team-part .contain h3{
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    #team-part .contain h5{
+        font-size: 13px;
+    }
+    #team-part .contain p{
+        font-size: 13px;
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
+    #testimonials h2{
+        font-size: 20px;
+        padding-top: 30px;
+    }
+    #testimonials p{
+        font-size: 10px;
+        padding-top: 5px;
+    }
+    #testimonials span{
+        font-size: 12px;
+    }
+    #testimonials{
+        padding-bottom: 30px;
+    }
+    #contact h2{
+        font-size: 20px;
+        padding-bottom: 0px;
+    }
+    #contact h3{
+        font-size: 15px;
+        padding-top: 15px;
+    }
+    #contact p{
+        font-size: 10px;
+    }
+    #contact .social_icon{
+        padding-top: 0px;
+    }
+    #contact .social_media {
+        padding-top: 0px;
+    }
+    #contact .social_media li a{
+        font-size: 12px;
+    }
+    #contact .from-area .input{
+        height: 40px;
+        margin-top: 10px;
+        padding: 0 10px;
+        font-size: 12px;
+        border-radius: 2px;
+    }
+    #contact .from-area textarea.input{
+        height: 110px;
+    }
+    #contact{
+        padding: 20px 0;
+    }
+    #contact .from-area .send{
+        font-size: 12px;
+        border: 1px solid #49cbcd;
+        border-radius: 2px;
+        line-height: 30px;
+        padding: 0 55px;
+        margin-top: 10px;
+    }
+    #contact .social_icon .fa-facebook-f{
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+    }
+    #contact .social_icon .fa-twitter{
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+    }
+    #contact .social_icon .fa-google-plus-g{
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+    }
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

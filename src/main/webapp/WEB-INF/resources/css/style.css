@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a, a:hover {
+  text-decoration: none; }
+
+ul, li {
+  list-style: none; }
+
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #c6c1c1; }
+  .navbar .form-inline {
+    margin-left: 210px; }
+    .navbar .form-inline .form-control {
+      color: #ea0e0e; }
+    .navbar .form-inline .btn {
+      color: #393939;
+      border-color: #393939; }
+      .navbar .form-inline .btn:hover {
+        background: #393939;
+        color: #fff; }
+  .navbar .navbar-nav .liiii .link {
+    color: #393939;
+    font-size: 25px;
+    margin-left: 20px; }
+  .navbar .ista-img {
+    background: url(../images/indexfdhdr.png) no-repeat center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 20px;
+    border: 0.5px solid #393939; }
+#gallary{
+	margin: 50px 0px;
+}
+
+#gallary .border {
+  border: 1px solid #8b8b8b; }
+  #gallary .border .pro .proimg {
+    line-height: 45px; }
+    #gallary .border .pro .proimg img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%; }
+#gallary .padd {
+  padding: 12px 0; }
+  #gallary .padd .text1 {
+    line-height: 7px; }
+    #gallary .padd .text1 .tx-a1 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #211f1f; }
+  #gallary .padd .text2 {
+    line-height: 20px; }
+    #gallary .padd .text2 .tx-a2 {
+      font-size: 10px;
+      font-weight: 400;
+      color: #4e4444; }
+#gallary .tx-icon i {
+  font-size: 25px;
+  color: #211f1f; }
+#gallary .big-img img {
+  width: 100%;
+  height: auto; }
+#gallary .icon_3 .i3-ul .i3-li {
+  display: inline-block; }
+  #gallary .icon_3 .i3-ul .i3-li a i {
+    font-size: 25px;
+    color: #211f1f; }
+#gallary .icon_1 i {
+  font-size: 25px;
+  color: #211f1f; }
+#gallary .like .love-like {
+  font-size: 13px;
+  font-weight: 600;
+  color: #211f1f; }
+#gallary .like span {
+  display: block; }
+#gallary .top {
+  border-top: 1px solid #8b8b8b; }
+#gallary form .comments {
+  width: 100%;
+  border: 0; }
+
+/*# sourceMappingURL=style.css.map */

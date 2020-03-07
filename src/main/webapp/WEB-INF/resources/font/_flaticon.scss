@@ -1,0 +1,52 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 06/03/2020 22:52
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-heart:before { content: "\f100"; }
+.flaticon-comment:before { content: "\f101"; }
+.flaticon-plane:before { content: "\f102"; }
+.flaticon-home:before { content: "\f103"; }
+.flaticon-explore:before { content: "\f104"; }
+.flaticon-add:before { content: "\f105"; }
+    
+    $font-Flaticon-heart: "\f100";
+    $font-Flaticon-comment: "\f101";
+    $font-Flaticon-plane: "\f102";
+    $font-Flaticon-home: "\f103";
+    $font-Flaticon-explore: "\f104";
+    $font-Flaticon-add: "\f105";
