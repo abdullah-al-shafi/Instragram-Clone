@@ -32,8 +32,13 @@ public class ServletConfig implements WebMvcConfigurer{
 		
 		//POST IMAGES
 	    registry.addResourceHandler("/images/posts/**").addResourceLocations("file:///"+Constants.UPLOADED_FOLDER);
+	    
+//	  //POST IMAGES
+//	    registry.addResourceHandler("/images/posts/**").addResourceLocations("file:///"+Constants.UPLOADED_FOLDER);
 		
 		registry.addResourceHandler("/images/profile/**").addResourceLocations("file:///"+Constants.UPLOADED_FOLDER);
+		
+//		registry.addResourceHandler("/images/profile/**").addResourceLocations("file:///"+Constants.UPLOADED_FOLDER);
 		
 		//font
 		registry.addResourceHandler("/font/**").addResourceLocations("/WEB-INF/resources/font/");
