@@ -14,13 +14,15 @@ import javax.persistence.Table;
 
   @Entity
   
-  @Table(name = "tbl_reaction") public class Reaction implements Serializable{
+  @Table(name = "tbl_reaction") 
+  public class Reaction implements Serializable{
   
   @Id
   
   @GeneratedValue(strategy = GenerationType.SEQUENCE)
   
- @Column(name = "id") private long reactionId;
+ @Column(name = "id") 
+  private long reactionId;
   
   @OneToOne
   
