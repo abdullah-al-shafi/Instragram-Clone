@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/all.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https:/resources/demos/style.css">
     
 </head>
 
@@ -68,12 +67,12 @@
 		</form:form>
 	</div>
 
+	<script src="${pageContext.request.contextPath }/js/jquery.js"></script>
 	<script src="${pageContext.request.contextPath }/js/jquery-1.12.4.js"></script>
     <script src="${pageContext.request.contextPath }/js/fontawesome.min.js"></script>
     <script src="${pageContext.request.contextPath }/js/bootstrap.js"></script>
     <script src="${pageContext.request.contextPath }/js/slick.min.js"></script>
     <script src="${pageContext.request.contextPath }/js/custom.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     
     <script>

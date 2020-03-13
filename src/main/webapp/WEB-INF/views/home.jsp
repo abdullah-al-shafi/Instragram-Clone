@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/slick.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/all.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"> --%>
+    
+  
 </head>
 <body>
 
@@ -60,7 +62,9 @@
                         <div class="col-lg-11">
                             <div class="icon_3">
                                 <ul class="i3-ul">
-                                    <li class="i3-li"><a href="#"><i class="flaticon-heart"></i></a></li>
+                                    <li class="i3-li"><a><i onclick="addLike(${posts.postsId},${posts.user.userId},this)" class="flaticon-heart" style="color: ${colorAttr}">
+                                    
+                                    </i></a></li>
                                     <li class="i3-li"><a href="#"><i class="flaticon-comment"></i></a></li>
                                     <li class="i3-li"><a href="#"><i class="flaticon-plane"></i></a></li>
                                 </ul>
@@ -74,7 +78,8 @@
                     <div class="row">
                         <div class="col-lg-12 eye">
                             <div class="like">
-                                    <a class="lve-like">1 like</a>
+                                    <a> <em class="lve-like" id="like_count_${posts.postsId}"> 0 </em> like</a>
+                                    
                                     <span><a class="love-like"><b>${posts.user.username}</b> ${posts.postsText}</a><br></span>
                                     <div class="love-like">
                                     <time class="published" >
@@ -112,6 +117,43 @@
 		
 
 <script>
+
+function addLike(postId, userId, element) {
+
+    var url = "${pageContext.request.contextPath}/api/v1/post/like";
+
+    //console.log(this);
+    $.ajax({
+        method: "POST",
+        url: url,
+        data: {postId: postId, userId: userId}
+    }).done(function (response) {
+        console.log(response);
+        console.log("like saved");
+
+        var totalLikeStr = document.getElementById("like_count_"+postId).innerHTML;
+        var totalLike = parseInt(totalLikeStr);
+
+        if (response > 0) {
+            // liked state
+            $(element).css("color", "#44d0b0");
+            totalLike++;
+        } else {
+            // unliked state
+            $(element).css("color", "#8d8d8d");
+            totalLike--;
+        }
+
+        document.getElementById("like_count_"+postId).innerHTML = totalLike;
+
+
+    }).fail(function () {
+
+        console.log("failed to save like");
+    });
+
+}
+
     
 </script>
 </body>
