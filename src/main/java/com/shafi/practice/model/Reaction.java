@@ -18,7 +18,6 @@ import javax.persistence.Table;
   public class Reaction implements Serializable{
   
   @Id
-  
   @GeneratedValue(strategy = GenerationType.SEQUENCE)
   
  @Column(name = "id") 

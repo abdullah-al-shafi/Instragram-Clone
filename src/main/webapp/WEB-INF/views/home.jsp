@@ -11,16 +11,6 @@
 <head>
 <meta charset="ISO-8859-1">
     <title>Instagram-clone</title>
-<%--     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/flaticon.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/fontawesome.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/responsive.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/font/flaticon.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/slick.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/all.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css"> --%>
-    
-  
 </head>
 <body>
 
@@ -62,6 +52,7 @@
                         <div class="col-lg-11">
                             <div class="icon_3">
                                 <ul class="i3-ul">
+                                	<c:set var="colorAttr" value="#8d8d8d"/>
                                     <li class="i3-li"><a><i onclick="addLike(${posts.postsId},${posts.user.userId},this)" class="flaticon-heart" style="color: ${colorAttr}">
                                     
                                     </i></a></li>
@@ -114,11 +105,11 @@
     </section>		
 			
 			
-		
+
 
 <script>
 
-function addLike(postId, userId, element) {
+function addLike(postsId, userId, element) {
 
     var url = "${pageContext.request.contextPath}/api/v1/post/like";
 
@@ -126,7 +117,7 @@ function addLike(postId, userId, element) {
     $.ajax({
         method: "POST",
         url: url,
-        data: {postId: postId, userId: userId}
+        data: {postId: postsId, userId: userId}
     }).done(function (response) {
         console.log(response);
         console.log("like saved");
@@ -136,11 +127,11 @@ function addLike(postId, userId, element) {
 
         if (response > 0) {
             // liked state
-            $(element).css("color", "#44d0b0");
+            $(element).css("color", "#ff0000");
             totalLike++;
         } else {
             // unliked state
-            $(element).css("color", "#8d8d8d");
+            $(element).css("color", "#000000");
             totalLike--;
         }
 
@@ -153,6 +144,7 @@ function addLike(postId, userId, element) {
     });
 
 }
+
 
     
 </script>

@@ -1,6 +1,8 @@
 package com.shafi.practice.service;
 
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 
@@ -35,18 +37,27 @@ public class ReactionService {
     	BeanUtils.copyProperties(like,likeEntity);
         
     	reactionRepository.save(likeEntity);
+    	
+    	List<Reaction> reactions = reactionRepository.findByPosts_postsId(postId);
 
-        long likeId = reactionRepository.count();
-        return likeId;
+        long likeTotal = reactions.size();
+        return likeTotal;
         
+    }
+    
+    public long totalReaction(long postsId) {
+    	
+    	List<Reaction> reactions = reactionRepository.findByPosts_postsId(postsId);
+        long likeTotal = reactions.size();
+        return likeTotal;
     }
 	
 	public boolean isAlreadyLiked(long postId, long userId) {
 		var reacton = reactionRepository.findByPosts_postsIdAndReactedUser_userId(postId, userId);
 		if (reacton != null) {
-			return false;
-		} else {
 			return true;
+		} else {
+			return false;
 		}
 	}
 	

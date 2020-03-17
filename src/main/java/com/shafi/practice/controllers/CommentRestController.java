@@ -49,12 +49,16 @@ public class CommentRestController {
 
         long likeid = 0;
         
+        long likeTotal = 0;
+        
         boolean isExists = reactionService.isAlreadyLiked(postId,userId);
         if (isExists){
             long val = reactionService.removeLike(postId,userId);
             logger.info("removed val: "+val);
+            likeid = 0;
         }else {
-            likeid =   reactionService.addNewLike(postId,userId);
+        	likeTotal = reactionService.addNewLike(postId,userId);
+        	likeid = 1;
         }
 
         /*return "redirect:/index";*/
